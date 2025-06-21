@@ -2,16 +2,18 @@
 
 int main()
 {
-    char operator;
+    char operator,choice;
     double num1, num2, result;
 
-    printf("Enter an operator (+, -, *, /): ", operator);
-    scanf("%c", &operator);
+     do {
 
-    printf("Enter numbers 1: ", num1);
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &operator);
+
+    printf("Enter numbers 1: ");
     scanf("%lf", &num1);
 
-    printf("Enter numbers 2: ", num2);
+    printf("Enter numbers 2: ");
     scanf("%lf", &num2);
 
     switch (operator)
@@ -41,6 +43,16 @@ int main()
     default:
         printf("Invalid operator\n");
     }
+
+
+    printf("Do you want to perform another calculation? (y= yes/n= no): ",choice);
+        scanf(" %c", &choice); 
+
+    } while (choice == 'y' || choice == 'Y');
+
+    printf("Calculator exited.\n");
+
+
 
     return 0;
 }
