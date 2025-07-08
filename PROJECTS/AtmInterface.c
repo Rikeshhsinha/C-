@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int pin, option,choice;
+    int pin, option;
     float balance = 50000, amount;
 
     printf("Enter your 4-digit PIN: ");
@@ -44,21 +44,10 @@ int main() {
                     printf("Invalid option.\n");
             }
         } while (option != 4);
+        printf("ATM exited.\n");  
+    } else {
+        printf("Incorrect PIN. Access denied.\n");
+    }
 
-        printf("Do you want to perform another transiction? (y= yes/n= no): ",choice);
-        scanf(" %c", &choice); 
-
-    }  (choice == 'y' || choice == 'Y');
-
-    printf("Atm exited.\n");
-
-
-
-
-
-
-    
-
-
-    return 0;
+    return 0; 
 }
